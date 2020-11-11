@@ -17,10 +17,24 @@
   </head>
 
   <body>
-    <div class="container">
-      <%= yield %>
-    </div>
+
+    <section id="header">
+
+    </section>
+
+    <section id="one" class="main style1">
+      <div class="container">
+        <%= yield %>
+      </div>
     
+			</section>
+    
+    
+    <section id="footer">
+        <li>&copy; Untitled</li>
+        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+      </ul>
+    </section>
   </body>
   <%= javascript_pack_tag 'application'%>
 </html>
