@@ -1,0 +1,16 @@
+<% if @post.errors.any? %>
+    <div id="error_explanation">
+        <h2>
+            <%= pluralize(@post.errors.count, "error") %>
+            prohibited this post from being saved:
+        </h2>
+        <ul>
+            <% @post.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+        </ul>
+    </div>
+    <p> <%=link_to 'Try Again', posts_dashboard_path %></p> 
+<% else %>
+    <h1>Se ha creado un post con éxito, vuelve a <%=link_to 'Post', root_path %></h1> 
+<% end %>

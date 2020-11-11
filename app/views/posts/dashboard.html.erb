@@ -1,0 +1,18 @@
+<h1>Crear artículo</h1>
+<form method="POST" action="/posts/create" id="create_posts">
+    <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+  <div class="form-group">
+    <label for="title">Título</label>
+    <input name="title"type="text" class="form-control" id="title" placeholder="Ingrese título">
+  </div>
+  <div class="form-group">
+    <label for="image_url">Imagen</label>
+    <input name="image_url" type="text" class="form-control" id="image_url" placeholder="Ingrese la url de la imagen">
+  </div>
+  <div class="form-group">
+    <label for="content">Contenido</label>
+    <input name="content" type="text" class="form-control" id="content" placeholder="Ingrese el contenido">
+  </div>
+  <button type="submit" class="btn btn-primary">Guardar</button>
+</form>
+

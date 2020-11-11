@@ -1,0 +1,24 @@
+<h1>Posts</h1>
+<table class="table">
+<div class="row">
+    <div class="col -md-3"> 
+        <tr>
+            <th>Título</th>
+            <th>Fecha de ingreso</th>
+            <th>Imágen</th>
+            <th>Contenido</th>
+        </tr>
+   
+        <% @post.each do |post|%>
+        <tr>
+        
+            <td><%= post.title %></td>
+            <td><%= post.created_at.strftime("%F") %></td>
+            <td><%= post.image_url %></td>
+            <td><%= post.content %></td>
+        <% end%>
+        </tr>
+    </div>
+</div>
+</table>
+<p>Crea un <%=link_to 'Post aquí', posts_dashboard_path %></p> 
